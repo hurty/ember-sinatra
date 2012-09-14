@@ -1,5 +1,7 @@
 class App < Sinatra::Base
+  set :views, settings.root + '/app/views'
+
   get '/' do
-    "Hello"
+    erb :layout
   end
 end
